@@ -3,64 +3,7 @@
   <title>Jogo de Paciência - nivelfácil</title>
   <meta charset="UTF-8">
   <style>
-    .carta {
-  width: 100px;
-  height: 150px;
-  
-  
-  position: relative;
-}
-.frente {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: linear-gradient(45deg,white,blue);
-  padding: 10px;
-}
-
-.verso {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-  display: none;
-}
-
-.canto-superior-esquerdo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.canto-inferior-direito {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-.numero {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.naipe {
-  font-size: 18px;
-}
-.canto-inferior-direito{
-transform: rotate(180deg);
-}
-.meio {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 36px;
-  font-weight: bold;
-}
+    
   </style>
   <script>
     function inicializar(){
@@ -91,18 +34,7 @@ transform: rotate(180deg);
   </script>
 </head>
 
-<body  bgcolor="red">
-  <div class="carta">
-  <div class="frente">
-<div class="meio">
-      <span class="letras">JD</span>
-    </div>
-  </div>
-  <div class="verso">
-    <!-- Imagem ou cor de fundo para o verso da carta -->
-  </div>
-</div>
-  </div>
-</div>
+<body  onload='inicializar()'>
+
 </body>
 </html>
