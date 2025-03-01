@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>Jogo de Paciência - nivelfácil</title>
+  <meta charset="UTF-8">
+  <style>
+    .carta {
+  width: 100px;
+  height: 150px;
+  
+  
+  position: relative;
+}
+.frente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(45deg,white,blue);
+  padding: 10px;
+}
+
+.verso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  display: none;
+}
+
+.canto-superior-esquerdo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.canto-inferior-direito {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.numero {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.naipe {
+  font-size: 18px;
+}
+.canto-inferior-direito{
+transform: rotate(180deg);
+}
+.meio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+}
+  </style>
+  <script>
+    function inicializar(){
+      var cartas=["K","Q","J","10","9","8","7","6","5","4","3","2","1","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","1","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","1","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","1","A"];
+
+      cartas.sort(() => Math.random() - 0.5);
+      document.write(cartas+"<br>");
+      var cartas_iniciais=cartas.slice(0,30);
+      var cartas_dentro=cartas.slice(30);
+      document.write(cartas_iniciais+"<br>");
+      var cartas_iniciais1=cartas_iniciais.slice(0,5);
+      var cartas_iniciais2=cartas_iniciais.slice(5,10);
+      var cartas_iniciais3=cartas_iniciais.slice(10,15);
+      var cartas_iniciais4=cartas_iniciais.slice(15,20);
+      var cartas_iniciais5=cartas_iniciais.slice(20,25);
+      var cartas_iniciais6=cartas_iniciais.slice(25,30);
+      document.write(cartas_iniciais1+"<br>");
+      document.write(cartas_iniciais2+"<br>");
+      document.write(cartas_iniciais3+"<br>");
+      document.write(cartas_iniciais4+"<br>");
+      document.write(cartas_iniciais5+"<br>");
+      document.write(cartas_iniciais6+"<br>");
+      document.write(cartas_dentro+"<br>");
+    }
+  </script>
+</head>
+
+<body  bgcolor="red">
+  <div class="carta">
+  <div class="frente">
+<div class="meio">
+      <span class="letras">JD</span>
+    </div>
+  </div>
+  <div class="verso">
+    <!-- Imagem ou cor de fundo para o verso da carta -->
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
