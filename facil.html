@@ -3,16 +3,21 @@
   <title>Jogo de Paciência - nivelfácil</title>
   <meta charset="UTF-8">
   <style>
-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+#primeira_fileira{
+  position: relative;
 }
 
-div:nth-child(2) {
-  top: 10px;
-  z-index: 2;
+#c1{
+  position: absolute;
+  z-index:1;
+}
+#c2{
+  position: absolute;
+  z-index:2;
+}
+  #c3{
+  position: absolute;
+  z-index:3;
 }
   </style>
   <script>
@@ -25,97 +30,53 @@ div:nth-child(2) {
       cartas.sort(() => Math.random() - 0.5);
       var cartas_iniciais=cartas.slice(0,30);
       var cartas_dentro=cartas.slice(30);
-      var cartas_iniciais1=cartas_iniciais.slice(0,5);
-      var cartas_iniciais2=cartas_iniciais.slice(5,10);
-      var cartas_iniciais3=cartas_iniciais.slice(10,15);
-      var cartas_iniciais4=cartas_iniciais.slice(15,20);
-      var cartas_iniciais5=cartas_iniciais.slice(20,25);
-      var cartas_iniciais6=cartas_iniciais.slice(25,30);
-var img;
+function identificarCarta(posicaoLista){
 for(var a=1;a<=13;a++){
-if(cartas_iniciais[0]=="K"){
-img="cartas_de_copas/carta_rei.png"
+if(cartas_iniciais[posicaoLista]=="K"){
+return "cartas_de_copas/carta_rei.png"
 }
-if(cartas_iniciais[0]=="Q"){
-img="cartas_de_copas/carta_dama.png"
+if(cartas_iniciais[posicaoLista]=="Q"){
+return "cartas_de_copas/carta_dama.png"
 }
-if(cartas_iniciais[0]=="J"){
-img="cartas_de_copas/carta_valete.png"
+if(cartas_iniciais[posicaoLista]=="J"){
+return "cartas_de_copas/carta_valete.png"
 }
-if(cartas_iniciais[0]=="10"){
-img="cartas_de_copas/carta_10.png"
+if(cartas_iniciais[posicaoLista]=="10"){
+return "cartas_de_copas/carta_10.png"
 }
-if(cartas_iniciais[0]=="9"){
-img="cartas_de_copas/carta_9.png"
+if(cartas_iniciais[posicaoLista]=="9"){
+return "cartas_de_copas/carta_9.png"
 }
-if(cartas_iniciais[0]=="8"){
-img="cartas_de_copas/carta_8.png"
+if(cartas_iniciais[posicaoLista]=="8"){
+return "cartas_de_copas/carta_8.png"
 }
-if(cartas_iniciais[0]=="7"){
-img="cartas_de_copas/carta_7.png"
+if(cartas_iniciais[posicaoLista]=="7"){
+return "cartas_de_copas/carta_7.png"
 }
-if(cartas_iniciais[0]=="6"){
-img="cartas_de_copas/carta_6.png"
+if(cartas_iniciais[posicaoLista]=="6"){
+return "cartas_de_copas/carta_6.png"
 }
-if(cartas_iniciais[0]=="5"){
-img="cartas_de_copas/carta_5.png"
+if(cartas_iniciais[posicaoLista]=="5"){
+return "cartas_de_copas/carta_5.png"
 }
-if(cartas_iniciais[0]=="4"){
-img="cartas_de_copas/carta_4.png"
+if(cartas_iniciais[posicaoLista]=="4"){
+return "cartas_de_copas/carta_4.png"
 }
-if(cartas_iniciais[0]=="3"){
-img="cartas_de_copas/carta_3.png"
+if(cartas_iniciais[posicaoLista]=="3"){
+return "cartas_de_copas/carta_3.png"
 }
-if(cartas_iniciais[0]=="2"){
-img="cartas_de_copas/carta_2.png"
+if(cartas_iniciais[posicaoLista]=="2"){
+return "cartas_de_copas/carta_2.png"
 }
-if(cartas_iniciais[0]=="A"){
-img="cartas_de_copas/carta_as.png"
-}
-}
-document.carta1.src=img;
-for(var a=1;a<=13;a++){
-if(cartas_iniciais[1]=="K"){
-img="cartas_de_copas/carta_rei.png"
-}
-if(cartas_iniciais[1]=="Q"){
-img="cartas_de_copas/carta_dama.png"
-}
-if(cartas_iniciais[1]=="J"){
-img="cartas_de_copas/carta_valete.png"
-}
-if(cartas_iniciais[0]=="10"){
-img="cartas_de_copas/carta_10.png"
-}
-if(cartas_iniciais[1]=="9"){
-img="cartas_de_copas/carta_9.png"
-}
-if(cartas_iniciais[1]=="8"){
-img="cartas_de_copas/carta_8.png"
-}
-if(cartas_iniciais[1]=="7"){
-img="cartas_de_copas/carta_7.png"
-}
-if(cartas_iniciais[1]=="6"){
-img="cartas_de_copas/carta_6.png"
-}
-if(cartas_iniciais[1]=="5"){
-img="cartas_de_copas/carta_5.png"
-}
-if(cartas_iniciais[1]=="4"){
-img="cartas_de_copas/carta_4.png"
-}
-if(cartas_iniciais[1]=="3"){
-img="cartas_de_copas/carta_3.png"
-}
-if(cartas_iniciais[1]=="2"){
-img="cartas_de_copas/carta_2.png"
-}
-if(cartas_iniciais[1]=="A"){
-img="cartas_de_copas/carta_as.png"
+if(cartas_iniciais[posicaoLista]=="A"){
+return "cartas_de_copas/carta_as.png"
 }
 }
-document.carta2.src=img;
+}
+
+document.carta1.src=identificarCarta(0);
+document.carta2.src=identificarCarta(1);
+document.carta3.src=identificarCarta(2);
 
 
     }
@@ -123,9 +84,10 @@ document.carta2.src=img;
 </head>
 
 <body  onload='inicializar()'>
-<div>
-<img name="carta1" src="" width="100" height="120"><br>
-<img name="carta2" src="" width="100" height="120"><br>
+<div id="primeira_fileira">
+<img name="carta1" id="c1" src="" width="100" height="120"><br>
+<img name="carta2" id="c2" src="" width="100" height="120"><br>
+<img name="carta3" id="c3" src="" width="100" height="120"><br>
 </div>
 </body>
 </html>
