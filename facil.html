@@ -3,8 +3,15 @@
   <title>Jogo de Paciência - nivelfácil</title>
   <meta charset="UTF-8">
   <style>
+    .container{
+      display:flex;
+    }
+  .box{
+    margin:10px;
+  }
 #primeira_fileira{
   position: relative;
+  display:inline-block;
 }
 
 #c1{
@@ -15,7 +22,11 @@
   position: absolute;
   z-index:2;
 }
-  #c3{
+#c3{
+  position: absolute;
+  z-index:3;
+}
+#c3{
   position: absolute;
   z-index:3;
 }
@@ -88,11 +99,17 @@ document.carta4.src=identificarCarta(3);
 </head>
 
 <body  onload="inicializar()">
-<div id="primeira_fileira" onclick="teste()">
+  <div class="container">
+<div class="box" id="primeira_fileira" onclick="teste()">
 <img name="carta1" id="c1" src="" width="100" height="120"><br>
 <img name="carta2" id="c2" src="" width="100" height="120"><br>
 <img name="carta3" id="c3" src="" width="100" height="120"><br>
 <img name="carta4" id="c4" src="" width="100" height="120"><br>
 </div>
+<div class="box">
+  <img src="cartas_de_copas/verso_carta.png" width="100" height="120">
+</div>
+
+  </div>
 </body>
 </html>
