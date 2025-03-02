@@ -77,17 +77,22 @@ return "cartas_de_copas/carta_as.png"
 document.carta1.src=identificarCarta(0);
 document.carta2.src=identificarCarta(1);
 document.carta3.src=identificarCarta(2);
+document.carta4.src=identificarCarta(3);
 
 
+    }
+    function teste(){
+      alert();
     }
   </script>
 </head>
 
-<body  onload='inicializar()'>
-<div id="primeira_fileira">
+<body  onload="inicializar()">
+<div id="primeira_fileira" onclick="teste()">
 <img name="carta1" id="c1" src="" width="100" height="120"><br>
 <img name="carta2" id="c2" src="" width="100" height="120"><br>
 <img name="carta3" id="c3" src="" width="100" height="120"><br>
+<img name="carta4" id="c4" src="" width="100" height="120"><br>
 </div>
 </body>
 </html>
