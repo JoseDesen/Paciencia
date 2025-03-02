@@ -21,51 +21,92 @@
       var cartas_iniciais4=cartas_iniciais.slice(15,20);
       var cartas_iniciais5=cartas_iniciais.slice(20,25);
       var cartas_iniciais6=cartas_iniciais.slice(25,30);
-var imgA1;
+var img;
 for(var a=1;a<=13;a++){
 if(cartas_iniciais[0]=="K"){
-imgA1="cartas_de_copas/carta_rei.png"
+img="cartas_de_copas/carta_rei.png"
 }
 if(cartas_iniciais[0]=="Q"){
-imgA1="cartas_de_copas/carta_dama.png"
+img="cartas_de_copas/carta_dama.png"
 }
 if(cartas_iniciais[0]=="J"){
-imgA1="cartas_de_copas/carta_valete.png"
+img="cartas_de_copas/carta_valete.png"
 }
 if(cartas_iniciais[0]=="10"){
-imgA1="cartas_de_copas/carta_10.png"
+img="cartas_de_copas/carta_10.png"
 }
 if(cartas_iniciais[0]=="9"){
-imgA1="cartas_de_copas/carta_9.png"
+img="cartas_de_copas/carta_9.png"
 }
 if(cartas_iniciais[0]=="8"){
-imgA1="cartas_de_copas/carta_8.png"
+img="cartas_de_copas/carta_8.png"
 }
 if(cartas_iniciais[0]=="7"){
-imgA1="cartas_de_copas/carta_7.png"
+img="cartas_de_copas/carta_7.png"
 }
 if(cartas_iniciais[0]=="6"){
-imgA1="cartas_de_copas/carta_6.png"
+img="cartas_de_copas/carta_6.png"
 }
 if(cartas_iniciais[0]=="5"){
-imgA1="cartas_de_copas/carta_5.png"
+img="cartas_de_copas/carta_5.png"
 }
 if(cartas_iniciais[0]=="4"){
-imgA1="cartas_de_copas/carta_4.png"
+img="cartas_de_copas/carta_4.png"
 }
 if(cartas_iniciais[0]=="3"){
-imgA1="cartas_de_copas/carta_3.png"
+img="cartas_de_copas/carta_3.png"
 }
 if(cartas_iniciais[0]=="2"){
-imgA1="cartas_de_copas/carta_2.png"
+img="cartas_de_copas/carta_2.png"
 }
 if(cartas_iniciais[0]=="A"){
-imgA1="cartas_de_copas/carta_as.png"
+img="cartas_de_copas/carta_as.png"
 }
 }
-alert(cartas_iniciais[0]);
-alert(imgA1);
-document.carta1.src=imgA1;
+document.carta1.src=img;
+for(var a=1;a<=13;a++){
+if(cartas_iniciais[1]=="K"){
+img="cartas_de_copas/carta_rei.png"
+}
+if(cartas_iniciais[1]=="Q"){
+img="cartas_de_copas/carta_dama.png"
+}
+if(cartas_iniciais[1]=="J"){
+img="cartas_de_copas/carta_valete.png"
+}
+if(cartas_iniciais[0]=="10"){
+img="cartas_de_copas/carta_10.png"
+}
+if(cartas_iniciais[1]=="9"){
+img="cartas_de_copas/carta_9.png"
+}
+if(cartas_iniciais[1]=="8"){
+img="cartas_de_copas/carta_8.png"
+}
+if(cartas_iniciais[1]=="7"){
+img="cartas_de_copas/carta_7.png"
+}
+if(cartas_iniciais[1]=="6"){
+img="cartas_de_copas/carta_6.png"
+}
+if(cartas_iniciais[1]=="5"){
+img="cartas_de_copas/carta_5.png"
+}
+if(cartas_iniciais[1]=="4"){
+img="cartas_de_copas/carta_4.png"
+}
+if(cartas_iniciais[1]=="3"){
+img="cartas_de_copas/carta_3.png"
+}
+if(cartas_iniciais[1]=="2"){
+img="cartas_de_copas/carta_2.png"
+}
+if(cartas_iniciais[1]=="A"){
+img="cartas_de_copas/carta_as.png"
+}
+}
+document.carta2.src=img;
+
 
     }
   </script>
@@ -73,7 +114,8 @@ document.carta1.src=imgA1;
 
 <body  onload='inicializar()'>
 <div>
-<img name="carta1" src="" width="100" height="120">
+<img name="carta1" src="" width="100" height="120"><br>
+<img name="carta2" src="" width="100" height="120"><br>
 </div>
 </body>
 </html>
