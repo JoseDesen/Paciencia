@@ -38,6 +38,35 @@
   z-index:7;
   margin-top:90px;
 }
+.darCarta{
+  position: relative;
+  display:inline-block;
+  width:480px;
+  height:120px;
+  overflow:hidden;
+  
+}
+
+.dc1{
+  position: absolute;
+  z-index:1;
+  margin-left:0;
+}
+.dc2{
+  position: absolute;
+  z-index:2;
+  margin-left:30px;
+}
+.dc3{
+  position: absolute;
+  z-index:3;
+  margin-left:60px;
+}
+.dc4{
+  position: absolute;
+  z-index:7;
+  margin-left:90px;
+}
   </style>
   <script>
     function inicializar(){
@@ -107,6 +136,12 @@ document.carta4.src=identificarCarta(3);
 </head>
 
 <body  onload="inicializar()">
+  <div class="darCarta" onclick="maisCartas()">
+<img name="dcarta1" class="dc1" src="cartas_de_copas/verso_carta.png" width="100" height="120">
+<img name="dcarta2" class="dc2" src="cartas_de_copas/verso_carta.png" width="100" height="120">
+<img name="dcarta3" class="dc3" src="cartas_de_copas/verso_carta.png" width="100" height="120">
+<img name="dcarta4" class="dc4" src="cartas_de_copas/verso_carta.png" width="100" height="120">
+  </div>
   <div class="container">
 <div class="fileira" onclick="teste(1)">
 <img name="carta1" class="c1" src="" width="100" height="120"><br>
