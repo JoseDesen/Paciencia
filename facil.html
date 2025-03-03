@@ -76,16 +76,7 @@
   <script>
 var cartas_iniciais;
 var cartas_dentro;
-    function inicializar(){
-      var cartas=["K","Q","J","10","9","8","7","6","5","4","3","2","A",
-              "K","Q","J","10","9","8","7","6","5","4","3","2","A",
-              "K","Q","J","10","9","8","7","6","5","4","3","2","A",
-              "K","Q","J","10","9","8","7","6","5","4","3","2","A"];
-
-      cartas.sort(() => Math.random() - 0.5);
-      cartas_iniciais=cartas.slice(0,30);
-      cartas_dentro=cartas.slice(30);
-function identificarCarta(posicaoLista){
+    function identificarCarta(posicaoLista){
 for(var a=1;a<=13;a++){
 if(cartas_iniciais[posicaoLista]=="K"){
 return "cartas_de_copas/carta_rei.png"
@@ -127,7 +118,17 @@ if(cartas_iniciais[posicaoLista]=="A"){
 return "cartas_de_copas/carta_as.png"
 }
 }
-}
+    }
+    function inicializar(){
+      var cartas=["K","Q","J","10","9","8","7","6","5","4","3","2","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","A",
+              "K","Q","J","10","9","8","7","6","5","4","3","2","A"];
+
+      cartas.sort(() => Math.random() - 0.5);
+      cartas_iniciais=cartas.slice(0,30);
+      cartas_dentro=cartas.slice(30);
+
 
 document.f1carta1.src=identificarCarta(0);
 document.f1carta2.src=identificarCarta(1);
@@ -147,6 +148,7 @@ alert("dar carta");
 </head>
 
 <body  onload="inicializar()">
+  atualizou 
   <div class="darCarta" onclick="maisCartas()">
 <img name="dcarta1" class="dc1" src="cartas_de_copas/verso_carta.png" width="100" height="120">
 <img name="dcarta2" class="dc2" src="cartas_de_copas/verso_carta.png" width="100" height="120">
