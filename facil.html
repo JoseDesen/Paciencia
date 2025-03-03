@@ -89,54 +89,54 @@
 }
 .dc8{
   position: absolute;
-  z-index:4;
-  margin-left:0px;
+  z-index:8;
+  margin-left:210px;
 }
   </style>
   <script>
-let cartas_iniciais;
-let cartas_dentro;
-    function identificarCarta(variavel){
+let cartas;
+
+    function identificarCartaIniciais(variavel){
 if(typeof variavel =="number"){
 posicaoLista=variavel;
 for(var a=1;a<=13;a++){
-if(cartas_iniciais[posicaoLista]=="K"){
+if(cartas[posicaoLista]=="K"){
 return "cartas_de_copas/carta_rei.png"
 }
-if(cartas_iniciais[posicaoLista]=="Q"){
+if(cartas[posicaoLista]=="Q"){
 return "cartas_de_copas/carta_dama.png"
 }
-if(cartas_iniciais[posicaoLista]=="J"){
+if(cartas[posicaoLista]=="J"){
 return "cartas_de_copas/carta_valete.png"
 }
-if(cartas_iniciais[posicaoLista]=="10"){
+if(cartas[posicaoLista]=="10"){
 return "cartas_de_copas/carta_10.png"
 }
-if(cartas_iniciais[posicaoLista]=="9"){
+if(cartas[posicaoLista]=="9"){
 return "cartas_de_copas/carta_9.png"
 }
-if(cartas_iniciais[posicaoLista]=="8"){
+if(cartas[posicaoLista]=="8"){
 return "cartas_de_copas/carta_8.png"
 }
-if(cartas_iniciais[posicaoLista]=="7"){
+if(cartas[posicaoLista]=="7"){
 return "cartas_de_copas/carta_7.png"
 }
-if(cartas_iniciais[posicaoLista]=="6"){
+if(cartas[posicaoLista]=="6"){
 return "cartas_de_copas/carta_6.png"
 }
-if(cartas_iniciais[posicaoLista]=="5"){
+if(cartas[posicaoLista]=="5"){
 return "cartas_de_copas/carta_5.png"
 }
-if(cartas_iniciais[posicaoLista]=="4"){
+if(cartas[posicaoLista]=="4"){
 return "cartas_de_copas/carta_4.png"
 }
-if(cartas_iniciais[posicaoLista]=="3"){
+if(cartas[posicaoLista]=="3"){
 return "cartas_de_copas/carta_3.png"
 }
-if(cartas_iniciais[posicaoLista]=="2"){
+if(cartas[posicaoLista]=="2"){
 return "cartas_de_copas/carta_2.png"
 }
-if(cartas_iniciais[posicaoLista]=="A"){
+if(cartas[posicaoLista]=="A"){
 return "cartas_de_copas/carta_as.png"
 }
 }
@@ -196,8 +196,7 @@ return "cartas_de_copas/carta_as.png"
               "K","Q","J","10","9","8","7","6","5","4","3","2","A"];
 
       cartas.sort(() => Math.random() - 0.5);
-      cartas_iniciais=cartas.slice(0,30);
-      cartas_dentro=cartas.slice(30);
+      
 
 
 document.f1carta1.src="cartas_de_copas/verso_carta.png";
@@ -236,6 +235,93 @@ document.f6carta5.src=identificarCarta(29);
       alert(numero);
 document.f1carta5.src=identificarCarta("5");
     }
+let f1carta1=document.f1carta1.src;
+let f1carta2=document.f1carta2.src;
+let f1carta3=document.f1cartd4.src;
+let f1carta5=document.f1carta5.src;
+let f1carta6=document.f1carta6.src;
+let f1carta7=document.f1carta7.src;
+let f1carta8=document.f1carta8.src;
+let f1carta9=document.f1carta9.src;
+let f1carta10=document.f1carta10.src;
+let f1carta11=document.f1carta11.src;
+let f1carta12=document.f1carta12.src;
+let f1carta13=document.f1carta13.src;
+let f1carta14=document.f1carta14.src;
+let f1carta15=document.f1carta15.src;
+let f1carta16=document.f1carta16.src;
+let f1carta17=document.f1carta17.src;
+let f1carta18=document.f1carta18.src;
+let f1carta19=document.f1carta19.src;
+let f1carta20=document.f1carta20.src;
+function addfileira1(carta){
+    switch(true){
+      case f1carta1==carta_nada:
+        document.f1carta1.src=carta;
+        break;
+      case f1carta2==carta_nada:
+        document.f1carta2.src=carta;
+        break;
+      case f1carta3==carta_nada:
+        document.f1carta3.src=carta;
+        break;
+      case f1carta4==carta_nada:
+        document.f1carta4.src=carta;
+        break;
+      case f1carta5==carta_nada:
+        document.f1carta5.src=carta;
+        break;
+      case f1carta6==carta_nada:
+        document.f1carta6.src=carta;
+        break;
+      case f1carta7==carta_nada:
+        document.f1carta7.src=carta;
+        break;
+      case f1carta8==carta_nada:
+        document.f1carta8.src=carta;
+        break;
+      case f1carta9==carta_nada:
+        document.f1carta9.src=carta;
+        break;
+      case f1carta10==carta_nada:
+        document.f1carta10.src=carta;
+        break;
+      case f1carta11==carta_nada:
+        document.f1carta11.src=carta;
+        break;
+      case f1carta12==carta_nada:
+        document.f1carta12.src=carta;
+        break;
+      case f1carta13==carta_nada:
+        document.f1carta13.src=carta;
+        break;
+      case f1carta14==carta_nada:
+        document.f1carta14.src=carta;
+        break;
+      case f1carta15==carta_nada:
+        document.f1carta15.src=carta;
+        break;
+      case f1carta16==carta_nada:
+        document.f1carta16.src=carta;
+        break;
+      case f1carta17==carta_nada:
+        document.f1carta17.src=carta;
+        break;
+      case f1carta18==carta_nada:
+        document.f1carta18.src=carta;
+        break;
+      case f1carta19==carta_nada:
+        document.f1carta19.src=carta;
+        break;
+      case f1carta20==carta_nada:
+        document.f1carta20.src=carta;
+        break;
+      default:
+        alert("fileira cheia");
+    }
+  let carta_verso="https://josedesen.github.io/paciencia/cartas_de_copas/verso_carta.png";
+let carta_nada="https://josedesen.github.io/paciencia/cartas_de_copas/nada.png";
+  
 function maisCartas(){
 let d1=document.dcarta1.src;
 let d2=document.dcarta2.src;
@@ -245,35 +331,44 @@ let d5=document.dcarta5.src;
 let d6=document.dcarta6.src;
 let d7=document.dcarta7.src;
 let d8=document.dcarta8.src;
-let carta_verso="https://josedesen.github.io/paciencia/cartas_de_copas/verso_carta.png";
+
 switch(true){
   case d8==carta_verso:
     document.dcarta8.src="nada.png";
+    addfileira1(30);
     break;
   case d7==carta_verso:
     document.dcarta7.src="nada.png";
+    addfileira1(36);
     break;
   case d6==carta_verso:
     document.dcarta6.src="nada.png";
+    addfileira1(42);
     break;
   case d5==carta_verso:
     document.dcarta5.src="nada.png";
+    addfileira1(48);
     break;
   case d4==carta_verso:
     document.dcarta4.src="nada.png";
+addfileira1(54);
     break;
   case d3==carta_verso:
     document.dcarta3.src="nada.png";
+    addfileira1(60);
     break;
   case d2==carta_verso:
     document.dcarta2.src="nada.png";
+    addfileira1(66);
     break;
   case d1==carta_verso:
     document.dcarta1.src="nada.png";
+    addfileira1(72);
     break;
   default:
     alert("não tem mais carta");
 }
+  
 }
   </script>
 </head>
