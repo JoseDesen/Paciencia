@@ -83,8 +83,8 @@ var cartas_dentro;
               "K","Q","J","10","9","8","7","6","5","4","3","2","A"];
 
       cartas.sort(() => Math.random() - 0.5);
-      var cartas_iniciais=cartas.slice(0,30);
-      var cartas_dentro=cartas.slice(30);
+      cartas_iniciais=cartas.slice(0,30);
+      cartas_dentro=cartas.slice(30);
 function identificarCarta(posicaoLista){
 for(var a=1;a<=13;a++){
 if(cartas_iniciais[posicaoLista]=="K"){
@@ -138,7 +138,7 @@ document.carta4.src=identificarCarta(3);
     }
     function teste(numero){
       alert(numero);
-if(numero==1{
+if(numero==1){
 document.carta5.src="cartas_de_copas/carta_as.png"
 }
     }
