@@ -72,6 +72,26 @@
   z-index:4;
   margin-left:90px;
 }
+.dc5{
+  position: absolute;
+  z-index:5;
+  margin-left:120px;
+}
+.dc6{
+  position: absolute;
+  z-index:6;
+  margin-left:150px;
+}
+.dc7{
+  position: absolute;
+  z-index:7;
+  margin-left:180px;
+}
+.dc8{
+  position: absolute;
+  z-index:4;
+  margin-left:0px;
+}
   </style>
   <script>
 let cartas_iniciais;
@@ -225,29 +245,30 @@ let d5=document.dcarta5.src;
 let d6=document.dcarta6.src;
 let d7=document.dcarta7.src;
 let d8=document.dcarta8.src;
+let carta_verso="https://josedesen.github.io/paciencia/cartas_de_copas/verso_carta.png";
 switch(true){
-  case d8=="cartas_de_copas/verso_carta.png":
+  case d8==carta_verso:
     document.dcarta8.src="nada.png";
     break;
-  case d7=="cartas_de_copas/verso_carta.png":
+  case d7==carta_verso:
     document.dcarta7.src="nada.png";
     break;
-  case d6=="cartas_de_copas/verso_carta.png":
+  case d6==carta_verso:
     document.dcarta6.src="nada.png";
     break;
-  case d5=="cartas_de_copas/verso_carta.png":
+  case d5==carta_verso:
     document.dcarta5.src="nada.png";
     break;
-  case d4=="cartas_de_copas/verso_carta.png":
+  case d4==carta_verso:
     document.dcarta4.src="nada.png";
     break;
-  case d3=="cartas_de_copas/verso_carta.png":
+  case d3==carta_verso:
     document.dcarta3.src="nada.png";
     break;
-  case d2=="cartas_de_copas/verso_carta.png":
+  case d2==carta_verso:
     document.dcarta2.src="nada.png";
     break;
-  case d1=="cartas_de_copas/verso_carta.png":
+  case d1==carta_verso:
     document.dcarta1.src="nada.png";
     break;
   default:
