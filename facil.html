@@ -172,7 +172,9 @@
   </style>
   <script>
 let cartas;
-
+let carta_verso="https://josedesen.github.io/paciencia/cartas_de_copas/verso_carta.png";
+let carta_nada="https://josedesen.github.io/paciencia/cartas_de_copas/nada.png";
+  
     function identificarCartaIniciais(variavel){
 if(typeof variavel =="number"){
 posicaoLista=variavel;
@@ -312,7 +314,9 @@ document.f6carta5.src=identificarCarta(29);
       alert(numero);
 document.f1carta5.src=identificarCarta("5");
     }
-let f1carta1=document.f1carta1.src;
+
+function addfileira1(carta){
+  let f1carta1=document.f1carta1.src;
 let f1carta2=document.f1carta2.src;
 let f1carta3=document.f1cartd4.src;
 let f1carta5=document.f1carta5.src;
@@ -331,7 +335,6 @@ let f1carta17=document.f1carta17.src;
 let f1carta18=document.f1carta18.src;
 let f1carta19=document.f1carta19.src;
 let f1carta20=document.f1carta20.src;
-function addfileira1(carta){
     switch(true){
       case f1carta1==carta_nada:
         document.f1carta1.src=carta;
@@ -397,8 +400,6 @@ function addfileira1(carta){
         alert("fileira cheia");
     }
 }
-  let carta_verso="https://josedesen.github.io/paciencia/cartas_de_copas/verso_carta.png";
-let carta_nada="https://josedesen.github.io/paciencia/cartas_de_copas/nada.png";
   
 function maisCartas(){
 let d1=document.dcarta1.src;
