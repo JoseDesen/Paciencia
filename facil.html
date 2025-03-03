@@ -315,11 +315,11 @@ document.f6carta5.src=identificarCarta(29);
 document.f1carta5.src=identificarCarta("5");
     }
 
-function addfileira1(carta){
-  let f1carta1=document.f1carta1.src;
+function addfileira1(id_carta){
+let carta=identificarCarta(id_carta);
+let f1carta1=document.f1carta1.src;
 let f1carta2=document.f1carta2.src;
 let f1carta3=document.f1carta3.src;
-
 let f1carta4=document.f1carta4.src;
 let f1carta5=document.f1carta5.src;
 let f1carta6=document.f1carta6.src;
@@ -352,6 +352,7 @@ let f1carta20=document.f1carta20.src;
         break;
       case f1carta5==carta_nada:
         document.f1carta5.src=carta;
+        alert(carta)
         break;
       case f1carta6==carta_nada:
         document.f1carta6.src=carta;
