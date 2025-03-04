@@ -590,15 +590,24 @@ guardar_carta.push(f1carta5);
 break;
   case f1carta4!=carta_nada:
 guardar_carta.push(f1carta4);
- document.f1carta4.src=carta_nada; 
+ document.f1carta4.src=carta_nada;
+if(f1carta4==carta_nada && f1carta3==carta_verso){
+document.f1carta3.src=identificarCarta(2);
+}
 break;
  case f1carta3!=carta_nada:
 guardar_carta.push(f1carta3);
  document.f1carta3.src=carta_nada; 
+if(f1carta3==carta_nada && f1carta2==carta_verso){
+document.f1carta2.src=identificarCarta(1);
+}
 break;
  case f1carta2!=carta_nada:
 guardar_carta.push(f1carta2);
  document.f1carta2.src=carta_nada; 
+if(f1carta2==carta_nada && f1carta1==carta_verso){
+document.f1carta1.src=identificarCarta(0);
+}
 break;
  case f1carta1!=carta_nada:
 guardar_carta.push(f1carta1);
