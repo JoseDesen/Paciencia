@@ -403,13 +403,22 @@ document.f6carta5.src=identificarCarta(29);
 
     }
     function mover(numero){
-      alert(guardar_carta);
+      if(numero==1){
+if(guardar_carta[0]){
+addfileira1(identificarCarta(guardar_carta[0]));
+guarda_carta=[];
+}else{
+removerfileira1();
+}
+}
+if(numero==2){
 if(guardar_carta[0]){
 addfileira2(identificarCarta(guardar_carta[0]));
+guarda_carta=[];
 }else{
-alert("deu errado");
+removerfileira1();
 }
-      removerfileira1();
+ }    
 
     }
 function removerfileira1(){
