@@ -416,10 +416,41 @@ if(guardar_carta[0]){
 addfileira2(identificarCarta(guardar_carta[0]));
 guardar_carta=[];
 }else{
-removerfileira1();
+removerfileira2();
 }
  }    
-
+if(numero==3){
+if(guardar_carta[0]){
+addfileira3(identificarCarta(guardar_carta[0]));
+guardar_carta=[];
+}else{
+removerfileira3();
+}
+ }  
+  if(numero==4){
+if(guardar_carta[0]){
+addfileira4(identificarCarta(guardar_carta[0]));
+guardar_carta=[];
+}else{
+removerfileira4();
+}
+ }    
+if(numero==5){
+if(guardar_carta[0]){
+addfileira5(identificarCarta(guardar_carta[0]));
+guardar_carta=[];
+}else{
+removerfileira5();
+}
+ }    
+if(numero==6){
+if(guardar_carta[0]){
+addfileira6(identificarCarta(guardar_carta[0]));
+guardar_carta=[];
+}else{
+removerfileira6();
+}
+ }    
     }
 function removerfileira1(){
 let f1carta1=document.f1carta1.src;
